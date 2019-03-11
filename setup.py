@@ -8,9 +8,10 @@ setup(
 	description="SinoptikWeather provider",
 	packages=find_namespace_packages(),
 	entry_points={
-	    '': '',
+	  'weatherapp.provider':
+             'sinoptik=weatherapp.sinoptik.provider:SinoptikWeatherProvider',
 	},
 	install_requires=[
-	   'bs4',
+	   'bs4'
 	]
 )

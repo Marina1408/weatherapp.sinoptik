@@ -3,7 +3,7 @@ import urllib.parse
 
 from bs4 import BeautifulSoup
 
-from weatherapp.core import config
+from weatherapp.sinoptik import config
 from weatherapp.core import decorators
 from weatherapp.core.abstract import WeatherProvider
 
