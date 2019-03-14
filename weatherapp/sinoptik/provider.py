@@ -47,14 +47,14 @@ class SinoptikWeatherProvider(WeatherProvider):
 	    	url = base_url + part_1_url + part_2_url
 	    	self.save_configuration(location, url)
 	    else:
-	    	print('You inputed incorrect location! \nInput againe.')
+	    	self.app.stdout.write('You inputed incorrect location! \n'
+	    		                  'Input againe. \n')
 
 	    part_2_url = urllib.parse.quote(location)
 	    url = base_url + part_1_url + part_2_url
 
 	    self.save_configuration(location, url)
 	    
-	@decorators.timer
 	def get_weather_info(self, page_content):
 	    """ Getting the final result in tuple from sinoptik.ua site.
 	    """
