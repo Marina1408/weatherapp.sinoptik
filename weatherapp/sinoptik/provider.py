@@ -47,8 +47,8 @@ class SinoptikWeatherProvider(WeatherProvider):
 	    	url = base_url + part_1_url + part_2_url
 	    	self.save_configuration(location, url)
 	    else:
-	    	self.app.stdout.write('You inputed incorrect location! \n'
-	    		                  'Input againe. \n')
+	    	self.app.stdout.write('You entered incorrect location! \n'
+	    		                  'Please, enter again. \n')
 
 	    part_2_url = urllib.parse.quote(location)
 	    url = base_url + part_1_url + part_2_url
